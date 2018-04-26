@@ -13,7 +13,7 @@ public class Floats{
         else return y;
     }
 
-    public void setKleinstes(float kleinstes){
-        
+    public void setKleinstes(){
+        this.kleinstes = 
     }
 }
