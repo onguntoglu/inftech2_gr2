@@ -8,7 +8,7 @@ public class Floats{
 
     public float kleinere(float x, float y){
         if(Math.abs(x) < Math.abs(y)){
-            returnx;
+            return x;
         }
         else return y;
     }
