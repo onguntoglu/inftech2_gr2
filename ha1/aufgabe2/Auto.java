@@ -4,10 +4,11 @@ public class Auto implements Transportmittel{
     public Auto(float geschwindigkeit){
         this.geschwindigkeit = geschwindigkeit;
         if(geschwindigkeit > 100 || geschwindigkeit < -50){
-            geschwindigkeit = 0;
+            this.geschwindigkeit = 0;
         }
+        
     }
-
+    
     public float getGeschwindigkeit(){
         return this.geschwindigkeit;
     }
