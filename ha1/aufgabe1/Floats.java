@@ -14,6 +14,16 @@ public class Floats{
     }
 
     public void setKleinstes(){
-        this.kleinstes = 
+        this.kleinstes = this.werte[0];
+        for (int i = 1; i < this.werte.length; i++) {
+            this.kleinstes = kleinere(this.kleinstes, this.werte[i]);
+        }
+    }
+
+    public void ausgabeRekursiv(int index){
+        for (int i = index; i < this.werte.length; i++) {
+            System.out.println(this.werte[i]);
+        }
+        System.out.println(this.kleinstes);
     }
 }
