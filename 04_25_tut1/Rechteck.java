@@ -26,5 +26,9 @@ public class Rechteck implements Comparable{
                 return 1;
             }
         }
+        else{
+            return -1000;
+        }
+        return 10;
     }
 }
