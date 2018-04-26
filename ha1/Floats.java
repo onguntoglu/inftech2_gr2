@@ -13,7 +13,7 @@ public class Floats{
         else return y;
     }
 
-    public void setKeinstes(float kleinstes){
+    public void setKleinstes(float kleinstes){
         
     }
 }
