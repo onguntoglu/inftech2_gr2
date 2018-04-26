@@ -10,7 +10,7 @@ public class Auto implements Transportmittel{
     }
     
     public float getGeschwindigkeit(){
-        return geschwindigkeit;
+        return this.geschwindigkeit;
     }
 
     public void beschleunigen(float geschwindigkeit){
