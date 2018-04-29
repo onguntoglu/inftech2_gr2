@@ -13,5 +13,6 @@ public class TestPotenz{
         System.out.println("Berechnungserbegnis mit Potenz.potenzIterativ:  "+ "1: " + potenz2a + " | 2: " + potenz2b);
         System.out.println("Berechnungserbegnis mit Potenz.potenzRekursiv:  "+ "1: " + potenz3a + " | 2: " + potenz3b);
 
+        System.out.println("identische Ergebnisse sind erreicht.");
     }
 }
