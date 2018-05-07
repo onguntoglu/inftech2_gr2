@@ -18,7 +18,7 @@ public class Film  {
     
     // Methoden
     public String toString(){
-        String str = "Titel: " + titel + "Preis(EUR): " + Double.toString(preis) + "Laenge(min): " + Integer.toString(laenge) + beschreibung + erscheinungsdatum;
+        String str = "Titel: " + titel + " Preis(EUR): " + Double.toString(preis) + " Laenge(min): " + Integer.toString(laenge) + " Beschreibung: " + beschreibung + " Erscheinungsdatum: " + erscheinungsdatum;
         return str;
     }
 
