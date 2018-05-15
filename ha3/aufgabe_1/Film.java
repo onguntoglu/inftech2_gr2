@@ -19,11 +19,11 @@ public class Film  {
     // Methoden
     public String toString(){
         String str = "Titel: " + titel + " Preis(EUR): " + Double.toString(preis) + " Laenge(min): " + Integer.toString(laenge) + " Beschreibung: " + beschreibung + " Erscheinungsdatum: " + erscheinungsdatum;
-        return str;
+        return str;     // Gibt die Eigenschaften wiederzurück
     }
 
     public int compareTo(Film o){
-        int val = this.erscheinungsdatum.compareTo(o.erscheinungsdatum);
+        int val = this.erscheinungsdatum.compareTo(o.erscheinungsdatum);    // lexiographische Ordnung auswerten, siehe Hinweis
         return val;
     }
 }
