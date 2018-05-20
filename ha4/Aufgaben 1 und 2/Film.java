@@ -1,6 +1,3 @@
-import com.sun.org.apache.bcel.internal.generic.SWAP;
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.CompareGenerator;
-
 public class Film  implements Comparable {
     
     // Attribute
@@ -37,22 +34,8 @@ public class Film  implements Comparable {
         }
         else{
 
-            int value = this.titel.compareTo(other.titel);
+            int value = this.titel.compareTo(((Film)other).titel);
             return value;
         }        
-    }
-
-    public static void MySort(Comparable[] f){
-        int min;    // Position for Minimum
-        int select; 
-        int end = f.length - 1; // End of array
-        for(int i = 0; i < end; i++){ // Traverse the array
-            min = i;
-            for(select = i; select <= end; select++){
-                if(f[select] < f[min]) min = select;
-            }
-            swap(f,i,min);
-        }
-    }
-    
+    }  
 }
