@@ -28,14 +28,11 @@ public class Film  implements Comparable {
     }
     
     public int compareTo(Comparable other) {
-        if(!(other instanceof Film)){
-            int value = 0;
-            return value;
-        }
-        else{
-
-            int value = this.titel.compareTo(((Film)other).titel);
-            return value;
-        }        
-    }  
+       if(other instanceof Film) {
+    	   int value = this.titel.compareTo(((Film)other).titel);
+    	  return value;
+       }	   
+        return 0;
+    }
+    
 }
