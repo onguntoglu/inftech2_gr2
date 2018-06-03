@@ -36,14 +36,10 @@ public class TestLinkedList{
     	filme.add(film3, 2);
  
     	filme.add(film4,3);
-    	
-    	System.out.println("Printing LinkedList filme");
- 
+    	 
     	printList(filme);
-    	
-    	System.out.println("Removing film at Index 3");
-    	
-    	removeAtIndex(filme,3);
+    	    	
+    	removeAtIndex(filme,2);
     	
     	printList(filme);
     	

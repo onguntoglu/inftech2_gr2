@@ -79,25 +79,26 @@ public class LinkedList {
     
     public Film removeHead() {
     	if(head == null) return null; //checking if there is a head
+    	System.out.println("Removing head of the list");
     	ListElem temp = head;
     	head = head.next; //head is now the next object
     	return temp.data; //returning value of the old, deleted head 
     }
     
     public Film removeTail() {
-    	//if(tail == null) return null; //checking if there is a head
-    	ListElem temp = tail;
+    	if(head == null) return null; //checking if there is a head
+    	System.out.println("Removing tail of the list");
     	ListElem laufvariable = head;
-    	while(laufvariable.next != tail) { //searching for the element before tail
-    		laufvariable = laufvariable.next;
-    	}
-    	laufvariable.data = null; //when I reach the element before tail I "delete" the reference to tail
-    	tail = laufvariable; // setting the element before tail as the new tail
-    	return laufvariable.data; //return the value of old tail 
+    	while(laufvariable.next.next != null) { //searching two elements after laufvariable
+    		laufvariable = laufvariable.next;	// set laufvariable to next element
+    	}	
+    	laufvariable.next = null; // if two elements after laufvariable point to null, set next element (last element of list) of laufvariable to null
+    	return laufvariable.data; // return laufvariable
     }
     
     public Film remove(int pos) {
     	ListElem laufvariable = head; // starting from the head
+    	System.out.println("Removing element at Index " + pos);
     	while(pos > 1) {
     		laufvariable = laufvariable.next; //reaching one place before the place where we want to add the new element
     		pos = pos - 1;
