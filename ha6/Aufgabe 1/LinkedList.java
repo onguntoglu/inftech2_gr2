@@ -27,16 +27,21 @@ public class LinkedList {
     }
 
     public Film getHead() {
+    	System.out.println("Getter-Head");
     	if(head.data == null) return null;
-    	 else return head.data;
+    	else return head.data;
     }
     
     public Film getTail() {
-    	if(tail.data == null) return null;
-    	 else return tail.data;
+    	ListElem laufvariable = head;
+    	System.out.println("Getter-Tail");
+    	while(laufvariable.next != null) {
+    		laufvariable = laufvariable.next;
+    	}
+    	return laufvariable.data;
     }
     
-    public Film get(int pos) {
+    public Film get(int pos) {   	
     	ListElem laufvariable = head;    //starting from the head
     	while(pos > 0) {
     		if (laufvariable.next == null)  return null; // checking if there is a next element
@@ -47,6 +52,7 @@ public class LinkedList {
     }
     
     public void addHead(Film val) {
+    	System.out.println("Adding film " + val.titel + " to head of list");
     	if (head==null) {
     		head = new ListElem(val) ;//if there was not a head
     	}
@@ -55,12 +61,19 @@ public class LinkedList {
     }
     
     public void addTail(Film val) {
+    	ListElem laufvariable = head;
+    	System.out.println("Adding film " + val.titel + " to tail of list");
     	ListElem newobj = new ListElem(val); //new element
-    	tail.next = newobj; // old tail has reference to the new element 
-    	tail = newobj;    // tail is the new element
+    	
+    	while(laufvariable.next != null) {
+    		laufvariable = laufvariable.next;
+    	}
+    	
+    	laufvariable.next = newobj;
     }
     
     public void add(Film val, int pos) {
+    	System.out.println("Adding film: " + val.titel);
     	ListElem newobj = new ListElem(val); //new element without reference 
     	ListElem laufvariable = head; // starting from the head
     	if(pos == 1) {
